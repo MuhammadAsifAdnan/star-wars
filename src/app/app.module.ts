@@ -12,6 +12,7 @@ import { AppConfigService } from 'src/services/app.config.service';
 import { AppConfigInitializer } from 'src/services/app.initializer.service';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { HttpRequestInterceptor } from './interceptors/http.request.interceptor';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { HttpRequestInterceptor } from './interceptors/http.request.interceptor'
     AppRoutingModule,
     environment.production ? [] : AkitaNgDevtools.forRoot(),
     AkitaNgRouterStoreModule,
-    NgbModule
+    NgbModule,
+    BrowserAnimationsModule
   ],
   providers: [
     AppConfigService,
