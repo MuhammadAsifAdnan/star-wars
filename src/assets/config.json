@@ -1,3 +1,5 @@
 {
-  "apiBasePath": "https://swapi.dev/api/"
+  "apiBasePath": "https://swapi.dev/api/",
+  "openingCrawlsSymbolLimit": 128,
+  "characterSearchDebounceInMS": 1000
 }
