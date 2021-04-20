@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { AppConfig } from '../models/app.config';
-import configJson from '../assets/config.json';
+import configJson from '../../assets/config.json';
 
 @Injectable({
   providedIn: 'root',
