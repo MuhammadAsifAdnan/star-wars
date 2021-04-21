@@ -1,6 +1,7 @@
 import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
-import { EnumSections } from 'src/app/enums/section.enum';
-import { Nav } from 'src/app/models/nav.model';
+
+import { EnumSections } from '../../enums/section.enum';
+import { Nav } from '../../models/nav.model';
 
 @Component({
   selector: 'app-navigation',

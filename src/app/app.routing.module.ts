@@ -1,10 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { CharacterDetailsComponent } from './components/character-detail/character-detail.component';
-import { CharactersComponent } from './components/characters/characters.component';
-import { MovieDetailComponent } from './components/movie-detail/movie-detail.component';
-import { MoviesComponent } from './components/movies/movies.component';
-import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+
+import { MovieDetailComponent } from './modules/feature/movies/components/movie-detail/movie-detail.component';
+import { MoviesComponent } from './modules/feature/movies/components/movies/movies.component';
+
+import { CharacterDetailsComponent } from './modules/feature/characters/components/character-detail/character-detail.component';
+import { CharactersComponent } from './modules/feature/characters/components/characters/characters.component';
+
+import { PageNotFoundComponent } from './modules/core/components/page-not-found/page-not-found.component';
 
 const routes: Routes = [
   {
