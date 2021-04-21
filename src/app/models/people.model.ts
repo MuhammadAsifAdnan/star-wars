@@ -1,5 +1,3 @@
-import { Film } from "./film";
-
 export interface People {
     name: string;
     height: string; // height in meters
@@ -9,5 +7,6 @@ export interface People {
     eye_color: string;
     birth_year: string;
     gender: string;
-    films: Film[];
+    films: string[]; // array of urls of films for this person,
+    url: string; // url to this resource
 }
