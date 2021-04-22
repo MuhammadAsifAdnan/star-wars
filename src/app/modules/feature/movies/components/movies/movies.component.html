@@ -1,6 +1,6 @@
 <div>
   <ng-container *ngFor="let movie of movies$ | async">
-    <app-movie-summary [movie]="movie"></app-movie-summary>
+    <app-movie-summary class="movie-summary" [movie]="movie"></app-movie-summary>
   </ng-container>
   <app-loading-spinner [isLoading$]="isLoading$"></app-loading-spinner>
 </div>
