@@ -7,6 +7,6 @@ export interface People {
     eye_color: string;
     birth_year: string;
     gender: string;
-    films: string[]; // array of urls of films for this person,
-    url: string; // url to this resource
+    films: string[]; // An array of film resource URLs that this person has been in.
+    url: string; //  the hypermedia URL of this resource
 }

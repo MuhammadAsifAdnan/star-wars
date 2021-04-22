@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MoviesQuery } from '../../state/movies.query';
+import { MoviesService } from '../../state/movies.service';
 
 @Component({
   templateUrl: './movies.component.html',
@@ -6,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MoviesComponent implements OnInit {
 
-  constructor() { }
+  movies$ = this.moviesQuery.selectAll();
+  isLoading$ = this.moviesQuery.selectLoading();
+  constructor(private moviesQuery: MoviesQuery,
+    private moviesService: MoviesService) { }
 
   ngOnInit(): void {
+    !this.moviesQuery.getHasCache() && this.moviesService.getMovies();
   }
 
 }

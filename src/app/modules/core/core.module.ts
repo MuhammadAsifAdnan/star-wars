@@ -1,6 +1,5 @@
 import { APP_INITIALIZER, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 
 import { AppConfigInitializer } from './services/app.initializer.service';
@@ -11,6 +10,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 
 import { NavigationComponent } from './components/navigation/navigation.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { SharedModule } from '../shared/shared.module';
 
 
 @NgModule({
@@ -20,8 +20,8 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
   ],
   imports: [
     CommonModule,
-    RouterModule,
-    MatToolbarModule
+    MatToolbarModule,
+    SharedModule
   ],
   providers: [
     AppConfigService,

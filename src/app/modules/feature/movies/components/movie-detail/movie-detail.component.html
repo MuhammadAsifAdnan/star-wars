@@ -1,1 +1,14 @@
-<p>movie-detail works!</p>
+<ng-container *ngIf="selectedMovie$ | async as selectedMovie">
+  <mat-card>
+    <mat-card-title>{{selectedMovie?.title}}</mat-card-title>
+    <mat-card-subtitle>Episode: {{selectedMovie?.episode_id}}</mat-card-subtitle>
+    <mat-card-content>
+      <p> {{selectedMovie?.opening_crawl}} </p>
+      <mat-list>
+        <mat-list-item>Directed by: {{selectedMovie?.director}} </mat-list-item>
+        <mat-list-item>Produced by: {{selectedMovie?.producer}} </mat-list-item>
+        <mat-list-item>Release date: {{selectedMovie?.release_date}} </mat-list-item>
+      </mat-list>
+    </mat-card-content>
+  </mat-card>
+</ng-container>

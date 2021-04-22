@@ -10,16 +10,18 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 import { AppRoutingModule } from './app.routing.module';
 import { CoreModule } from './modules/core/core.module';
-import { MoviesModule } from './modules/feature/movies/movie.module';
+import { MoviesModule } from './modules/feature/movies/movies.module';
 import { CharactersModule } from './modules/feature/characters/characters.module';
 
 import { AppComponent } from './app.component';
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     environment.production ? [] : AkitaNgDevtools.forRoot(),
     AkitaNgRouterStoreModule,

@@ -1,4 +1,8 @@
 export class AppConfig {
-  apiBasePath: string = '';
-  apiKey?: string = '';
+  apiBasePath = '';
+  moviesEndPoint = '';
+  charactersEndPoint = '';
+  openingCrawlsSymbolLimit = 0;
+  characterSearchDebounceInMS = 0;
+  apiCacheTimeout = 0;
 }

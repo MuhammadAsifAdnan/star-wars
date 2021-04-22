@@ -1,1 +1,6 @@
-<p>movies works!</p>
+<div>
+  <ng-container *ngFor="let movie of movies$ | async">
+    <app-movie-summary [movie]="movie"></app-movie-summary>
+  </ng-container>
+  <app-loading-spinner [isLoading$]="isLoading$"></app-loading-spinner>
+</div>

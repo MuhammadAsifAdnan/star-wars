@@ -1,5 +1,8 @@
 {
   "apiBasePath": "https://swapi.dev/api/",
+  "moviesEndPoint": "films",
+  "charactersEndPoint": "people",
   "openingCrawlsSymbolLimit": 128,
-  "characterSearchDebounceInMS": 1000
+  "characterSearchDebounceInMS": 1000,
+  "apiCacheTimeout": 3600000
 }
