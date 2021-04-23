@@ -19,10 +19,9 @@ export class MoviesService {
 
   }
 
-  getAllMovies() {
+  getAllMovies() { // TODO find better way to get movies and characters!
     return this.http.get<ApiResponseModel<Movie>>(this.moviesPath)
       .pipe(
-
         mergeMap((response: ApiResponseModel<Movie>) => {
           this.moviesStore.set(response.results.map((movie: Movie) => createMovie(movie)));
           return from(response.results)
@@ -35,7 +34,6 @@ export class MoviesService {
           this.charactersStore.add([modifiedCharacter]);
           return modifiedCharacter;
         })
-
       ).subscribe();
   }
 
