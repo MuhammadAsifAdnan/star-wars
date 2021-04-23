@@ -14,7 +14,7 @@ export class CharactersComponent implements OnInit {
 
   people$ = this.charactersQuery.selectAll();
 
-  peopleSearchControl = new FormControl();
+  peopleSearchControl$ = new FormControl();
 
   constructor(private charactersQuery: CharactersQuery, private moviesQuery: MoviesQuery, private router: Router) { }
 
@@ -22,7 +22,7 @@ export class CharactersComponent implements OnInit {
     !this.moviesQuery.getHasCache() && this.router.navigateByUrl('/movies');
 
     // TODO implement api search instead of client side search
-    this.peopleSearchControl.valueChanges.pipe(debounceTime(AppConfigService.appConfig.characterSearchDebounceInMS)).subscribe((searchTerm: string) => {
+    this.peopleSearchControl$.valueChanges.pipe(debounceTime(AppConfigService.appConfig.characterSearchDebounceInMS)).subscribe((searchTerm: string) => {
       this.people$ = this.charactersQuery.selectAll({
         filterBy: [
           ({ name }) => name?.toLocaleLowerCase().includes(searchTerm?.trim()?.toLocaleLowerCase())
