@@ -7,6 +7,7 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatListModule } from '@angular/material/list';
 
 
+
 @NgModule({
   declarations: [
     LoadingSpinnerComponent
@@ -16,7 +17,7 @@ import { MatListModule } from '@angular/material/list';
     RouterModule,
     MatCardModule,
     MatProgressSpinnerModule,
-    MatListModule
+    MatListModule,
   ],
   exports: [
     RouterModule,

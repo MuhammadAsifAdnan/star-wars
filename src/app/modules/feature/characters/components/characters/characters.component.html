@@ -1,3 +1,9 @@
+<p>
+  <mat-form-field appearance="outline">
+    <mat-label>Search characters</mat-label>
+    <input matInput placeholder="Search characters" [formControl]="peopleSearchControl">
+  </mat-form-field>
+</p>
 <ng-container *ngFor="let people of people$ | async">
   <mat-card class="character-card">
     <mat-card-title class="character-name" [routerLink]="[people?.id]">{{people?.name}} </mat-card-title>
