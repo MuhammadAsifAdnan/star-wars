@@ -1,1 +1,5 @@
-<p>characters works!</p>
+<ng-container *ngFor="let people of people$ | async">
+  <mat-card class="character-card">
+    <mat-card-title class="character-name" [routerLink]="[people?.id]">{{people?.name}} </mat-card-title>
+  </mat-card>
+</ng-container>

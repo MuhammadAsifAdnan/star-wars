@@ -1,0 +1,11 @@
+.character-card {
+  margin-bottom: 0.5rem;
+}
+.character-name {
+  &:hover {
+    cursor: pointer;
+  }
+  &:focus {
+    outline: none;
+  }
+}

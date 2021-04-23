@@ -14,7 +14,7 @@ export class MoviesComponent implements OnInit {
     private moviesService: MoviesService) { }
 
   ngOnInit(): void {
-    !this.moviesQuery.getHasCache() && this.moviesService.getMovies();
+    !this.moviesQuery.getHasCache() && this.moviesService.getAllMovies();
   }
 
 }
