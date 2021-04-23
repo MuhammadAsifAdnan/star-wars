@@ -1,0 +1,8 @@
+.movie-title {
+  &:hover {
+    cursor: pointer;
+  }
+  &:focus {
+    outline: none;
+  }
+}

@@ -1,0 +1,9 @@
+.movie-title {
+  &:hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+}
+.movies-header {
+  margin-top: 1rem !important;
+}

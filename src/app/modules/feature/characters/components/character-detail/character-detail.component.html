@@ -1,0 +1,23 @@
+<ng-container *ngIf="selectedCharacter$ | async as selectedCharacter">
+  <mat-card>
+    <mat-card-title>{{selectedCharacter?.name}}</mat-card-title>
+    <mat-card-content>
+      <mat-list>
+        <mat-list-item>Height: {{selectedCharacter?.height}} </mat-list-item>
+        <mat-list-item>Weight: {{selectedCharacter?.mass}} </mat-list-item>
+        <mat-list-item>Hair Color: {{selectedCharacter?.hair_color}} </mat-list-item>
+        <mat-list-item>Skin Color: {{selectedCharacter?.skin_color}} </mat-list-item>
+        <mat-list-item>Eye Color: {{selectedCharacter?.eye_color}} </mat-list-item>
+        <mat-list-item>Birth Year: {{selectedCharacter?.birth_year}} </mat-list-item>
+        <mat-list-item>Gender: {{selectedCharacter?.gender}} </mat-list-item>
+      </mat-list>
+      <ng-container *ngIf="selectedCharacter?.filmsSummary?.length">
+        <mat-card-title class="movies-header">Movie Appearances</mat-card-title>
+        <mat-list *ngFor="let film of selectedCharacter?.filmsSummary">
+          <mat-list-item class="movie-title" [routerLink]="'/movies/' + film?.id">{{film?.title}}
+          </mat-list-item>
+        </mat-list>
+      </ng-container>
+    </mat-card-content>
+  </mat-card>
+</ng-container>

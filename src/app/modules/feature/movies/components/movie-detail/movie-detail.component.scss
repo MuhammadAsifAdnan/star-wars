@@ -1,0 +1,9 @@
+.character-name {
+  &:hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+}
+.characters-header {
+  margin-top: 1rem;
+}

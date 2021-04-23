@@ -1,0 +1,22 @@
+<ng-container *ngIf="selectedMovie$ | async as selectedMovie">
+  <mat-card>
+    <mat-card-title>{{selectedMovie?.title}}</mat-card-title>
+    <mat-card-subtitle>Episode: {{selectedMovie?.episode_id}}</mat-card-subtitle>
+    <mat-card-content>
+      <p> {{selectedMovie?.opening_crawl}} </p>
+      <mat-list>
+        <mat-list-item>Directed by: {{selectedMovie?.director}} </mat-list-item>
+        <mat-list-item>Produced by: {{selectedMovie?.producer}} </mat-list-item>
+        <mat-list-item>Release date: {{selectedMovie?.release_date}} </mat-list-item>
+      </mat-list>
+      <ng-container *ngIf="selectedMovie?.characterSummary?.length">
+        <mat-card-title class="characters-header">Characters</mat-card-title>
+        <mat-list *ngFor="let character of selectedMovie?.characterSummary">
+          <mat-list-item class="character-name" [routerLink]="'/characters/' + character?.id">{{character?.name}}
+          </mat-list-item>
+        </mat-list>
+      </ng-container>
+    </mat-card-content>
+  </mat-card>
+</ng-container>
+<app-loading-spinner [isLoading$]="isLoading$"></app-loading-spinner>
