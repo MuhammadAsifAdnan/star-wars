@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { EntityActions } from '@datorama/akita';
 import { Observable } from 'rxjs';
@@ -9,7 +9,8 @@ import { MoviesStore } from '../../state/movies.store';
 
 @Component({
   templateUrl: './movie-detail.component.html',
-  styleUrls: ['./movie-detail.component.scss']
+  styleUrls: ['./movie-detail.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class MovieDetailComponent implements OnInit {
   selectedMovie$: Observable<Movie | undefined> = this.moviesQuery.selectActiveMovieWithCharactersSummary();

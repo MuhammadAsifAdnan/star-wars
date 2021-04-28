@@ -1,10 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { MoviesQuery } from '../../state/movies.query';
 import { MoviesService } from '../../state/movies.service';
 
 @Component({
   templateUrl: './movies.component.html',
-  styleUrls: ['./movies.component.scss']
+  styleUrls: ['./movies.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class MoviesComponent implements OnInit {
 

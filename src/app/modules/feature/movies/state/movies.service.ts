@@ -1,11 +1,10 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { AppConfigService } from 'src/app/modules/core/services/app.config.service';
+import { AppConfigService } from '../../../core/services/app.config.service';
 
-import { forkJoin, from, of } from 'rxjs';
+import { from } from 'rxjs';
 import { distinct, map, mergeMap, tap } from 'rxjs/operators';
-import { withTransaction } from '@datorama/akita';
-import { ApiResponseModel } from 'src/app/modules/core/models/api.response.model';
+import { ApiResponseModel } from '../../../core/models/api.response.model';
 import { Character, createCharacter } from '../../characters/state/character.model';
 import { createMovie, Movie } from './movie.model';
 import { MoviesStore } from './movies.store';

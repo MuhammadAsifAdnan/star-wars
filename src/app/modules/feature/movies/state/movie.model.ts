@@ -1,5 +1,5 @@
 import { ID } from '@datorama/akita';
-import { getIdFromUrl } from 'src/app/modules/shared/helper/utility';
+import { getIdFromUrl } from '../../../shared/helper/utility';
 import { Character } from '../../characters/state/character.model';
 export interface Movie {
   id: ID;

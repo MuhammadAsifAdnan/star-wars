@@ -1,5 +1,5 @@
-import { getIdFromUrl } from "src/app/modules/shared/helper/utility";
-import { Movie } from "../../movies/state/movie.model";
+import { Movie } from '../../movies/state/movie.model';
+import { getIdFromUrl } from '../../../shared/helper/utility';
 
 export interface Character {
   id: number | string;

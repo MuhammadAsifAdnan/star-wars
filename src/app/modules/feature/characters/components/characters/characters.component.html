@@ -1,7 +1,7 @@
 <p>
   <mat-form-field appearance="outline">
     <mat-label>Search characters</mat-label>
-    <input matInput placeholder="Search characters" [formControl]="peopleSearchControl$">
+    <input matInput placeholder="Search characters" [formControl]="peopleSearchControl">
   </mat-form-field>
 </p>
 <ng-container *ngFor="let people of people$ | async">
