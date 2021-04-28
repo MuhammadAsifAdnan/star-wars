@@ -4,7 +4,6 @@ import { HTTP_INTERCEPTORS } from '@angular/common/http';
 
 import { AppConfigInitializer } from './services/app.initializer.service';
 import { AppConfigService } from './services/app.config.service';
-import { HttpRequestInterceptor } from './interceptors/http.request.interceptor';
 
 import { MatToolbarModule } from '@angular/material/toolbar';
 
@@ -30,12 +29,7 @@ import { SharedModule } from '../shared/shared.module';
       useFactory: AppConfigInitializer,
       deps: [AppConfigService],
       multi: true,
-    },
-    {
-      provide: HTTP_INTERCEPTORS,
-      useClass: HttpRequestInterceptor,
-      multi: true,
-    },
+    }
   ],
   exports: [
     NavigationComponent,
