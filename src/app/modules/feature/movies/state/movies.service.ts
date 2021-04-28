@@ -27,7 +27,7 @@ export class MoviesService {
         distinct(), // filter out duplicate characters
         mergeMap((characterUrl: string) => this.http.get<Character>(characterUrl)),
         map((character: Character) => {
-          let modifiedCharacter = createCharacter(character);
+          const modifiedCharacter = createCharacter(character);
           this.charactersStore.add([modifiedCharacter]);
           return modifiedCharacter;
         })

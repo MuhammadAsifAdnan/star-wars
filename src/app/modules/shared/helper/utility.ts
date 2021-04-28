@@ -3,6 +3,6 @@ export function getIdFromUrl(url: string | undefined) {
     if (!url) {
         return;
     }
-    let pieces = url?.split('/');
+    const pieces = url?.split('/');
     return pieces[pieces.length - 2]
 }
