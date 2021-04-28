@@ -1,4 +1,4 @@
-import { Component, OnInit, ChangeDetectionStrategy, Input } from '@angular/core';
+import { Component, ChangeDetectionStrategy, Input } from '@angular/core';
 import { Observable } from 'rxjs';
 
 @Component({
@@ -7,11 +7,8 @@ import { Observable } from 'rxjs';
   styleUrls: ['./loading-spinner.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class LoadingSpinnerComponent implements OnInit {
+export class LoadingSpinnerComponent {
   @Input() isLoading$!: Observable<boolean>;
   constructor() { }
-
-  ngOnInit(): void {
-  }
 
 }

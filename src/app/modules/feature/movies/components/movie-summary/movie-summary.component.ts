@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, ChangeDetectionStrategy } from '@angular/core';
+import { Component, Input, ChangeDetectionStrategy } from '@angular/core';
 import { Movie } from '../../state/movie.model';
 
 @Component({
@@ -7,11 +7,8 @@ import { Movie } from '../../state/movie.model';
   styleUrls: ['./movie-summary.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class MovieSummaryComponent implements OnInit {
+export class MovieSummaryComponent {
   @Input() movie: Movie | undefined;
   constructor() { }
-
-  ngOnInit(): void {
-  }
 
 }
