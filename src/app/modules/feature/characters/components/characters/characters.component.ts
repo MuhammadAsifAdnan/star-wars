@@ -2,7 +2,7 @@ import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { Router } from '@angular/router';
 import { debounceTime } from 'rxjs/operators';
-import { AppConfigService } from 'src/app/modules/core/services/app.config.service';
+import { AppConfigService } from '../../../../core/services/app.config.service';
 import { MoviesQuery } from '../../../movies/state/movies.query';
 import { CharactersQuery } from '../../state/characters.query';
 

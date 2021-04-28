@@ -1,5 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { AppConfigService } from 'src/app/modules/core/services/app.config.service';
+import { AppConfigService } from '../../../core/services/app.config.service';
 
 @Pipe({
   name: 'openingCrawlTrimEllipsis'

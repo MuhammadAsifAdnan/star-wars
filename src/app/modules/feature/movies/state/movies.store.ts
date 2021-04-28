@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { ActiveState, EntityState, EntityStore, StoreConfig } from '@datorama/akita';
-import { AppConfigService } from 'src/app/modules/core/services/app.config.service';
+import { AppConfigService } from '../../../core/services/app.config.service';
 import { Movie } from './movie.model';
 
 export interface MoviesState extends EntityState<Movie>, ActiveState { }

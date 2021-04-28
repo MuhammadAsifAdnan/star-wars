@@ -1,9 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { forkJoin, Observable } from 'rxjs';
-import { map, mergeMap, tap } from 'rxjs/operators';
-import { ApiResponseModel } from 'src/app/modules/core/models/api.response.model';
-import { AppConfigService } from 'src/app/modules/core/services/app.config.service';
+import { tap } from 'rxjs/operators';
+import { ApiResponseModel } from '../../../core/models/api.response.model';
+import { AppConfigService } from '../../../core/services/app.config.service';
 import { Character, createCharacter } from './character.model';
 import { CharactersStore } from './characters.store';
 
