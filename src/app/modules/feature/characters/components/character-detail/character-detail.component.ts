@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { combineQueries } from '@datorama/akita';
 import { Observable } from 'rxjs';
@@ -10,7 +10,8 @@ import { CharactersStore } from '../../state/characters.store';
 
 @Component({
   templateUrl: './character-detail.component.html',
-  styleUrls: ['./character-detail.component.scss']
+  styleUrls: ['./character-detail.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class CharacterDetailsComponent implements OnInit {
 

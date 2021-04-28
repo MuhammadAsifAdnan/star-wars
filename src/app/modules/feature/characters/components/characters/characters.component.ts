@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { Router } from '@angular/router';
 import { debounceTime } from 'rxjs/operators';
@@ -8,7 +8,8 @@ import { CharactersQuery } from '../../state/characters.query';
 
 @Component({
   templateUrl: './characters.component.html',
-  styleUrls: ['./characters.component.scss']
+  styleUrls: ['./characters.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class CharactersComponent implements OnInit {
 

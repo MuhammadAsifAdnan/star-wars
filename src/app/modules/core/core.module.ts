@@ -1,6 +1,5 @@
 import { APP_INITIALIZER, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HTTP_INTERCEPTORS } from '@angular/common/http';
 
 import { AppConfigInitializer } from './services/app.initializer.service';
 import { AppConfigService } from './services/app.config.service';
