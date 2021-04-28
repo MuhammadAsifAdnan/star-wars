@@ -12,9 +12,7 @@ import { CharactersQuery } from '../../state/characters.query';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class CharactersComponent implements OnInit {
-
   people$ = this.charactersQuery.selectAll();
-
   peopleSearchControl = new FormControl();
 
   constructor(private charactersQuery: CharactersQuery, private moviesQuery: MoviesQuery, private router: Router) { }

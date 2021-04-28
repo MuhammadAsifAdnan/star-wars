@@ -1,11 +1,8 @@
 import { APP_INITIALIZER, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
 import { AppConfigInitializer } from './services/app.initializer.service';
 import { AppConfigService } from './services/app.config.service';
-
 import { MatToolbarModule } from '@angular/material/toolbar';
-
 import { NavigationComponent } from './components/navigation/navigation.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { SharedModule } from '../shared/shared.module';

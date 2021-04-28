@@ -14,8 +14,8 @@ import { CharactersStore } from '../../state/characters.store';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class CharacterDetailsComponent implements OnInit {
-
   selectedCharacter$: Observable<Character | undefined> = this.selectActiveCharacterWithMoviesSummary();
+
   constructor(private charactersQuery: CharactersQuery, private router: Router, private activatedRoute: ActivatedRoute, private charactersStore: CharactersStore, private moviesQuery: MoviesQuery) { }
 
   ngOnInit(): void {
@@ -27,6 +27,7 @@ export class CharacterDetailsComponent implements OnInit {
     // checks if the movieId exists in movieStore and sets it as active, else redirect to movies list
     this.charactersQuery.hasEntity(this.characterId) ? this.charactersStore.setActive(this.characterId) : this.router.navigateByUrl('characters');
   }
+
   get characterId() {
     return this.activatedRoute.snapshot.params.id;
   }

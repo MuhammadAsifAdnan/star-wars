@@ -12,7 +12,6 @@ export interface CharactersState extends EntityState<Character>, ActiveState { }
   },
 })
 export class CharactersStore extends EntityStore<CharactersState> {
-
   constructor() {
     super();
   }

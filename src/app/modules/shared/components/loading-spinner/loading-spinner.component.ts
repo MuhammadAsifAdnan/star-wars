@@ -9,6 +9,7 @@ import { Observable } from 'rxjs';
 })
 export class LoadingSpinnerComponent {
   @Input() isLoading$!: Observable<boolean>;
+
   constructor() { }
 
 }
