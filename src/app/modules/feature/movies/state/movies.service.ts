@@ -1,7 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { AppConfigService } from '../../../core/services/app.config.service';
-
 import { from } from 'rxjs';
 import { distinct, map, mergeMap, tap } from 'rxjs/operators';
 import { ApiResponseModel } from '../../../core/models/api.response.model';
@@ -12,10 +11,9 @@ import { CharactersStore } from '../../characters/state/characters.store';
 
 @Injectable({ providedIn: 'root' })
 export class MoviesService {
-
   moviesPath = AppConfigService.appConfig.apiBasePath + AppConfigService.appConfig.moviesEndPoint;
-  constructor(private http: HttpClient, protected moviesStore: MoviesStore, private charactersStore: CharactersStore) {
 
+  constructor(private http: HttpClient, protected moviesStore: MoviesStore, private charactersStore: CharactersStore) {
   }
 
   getAllMovies() { // TODO find better way to get movies and characters!

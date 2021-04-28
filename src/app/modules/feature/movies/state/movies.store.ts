@@ -12,7 +12,6 @@ export interface MoviesState extends EntityState<Movie>, ActiveState { }
   },
 })
 export class MoviesStore extends EntityStore<MoviesState> {
-
   constructor() {
     super();
   }

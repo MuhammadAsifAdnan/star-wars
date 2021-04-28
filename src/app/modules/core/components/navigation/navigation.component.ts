@@ -1,5 +1,4 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
-
 import { EnumSections } from '../../enums/section.enum';
 import { Nav } from '../../models/nav.model';
 
@@ -15,7 +14,9 @@ export class NavigationComponent {
     { displayName: EnumSections.Movies, path: 'movies' },
     { displayName: EnumSections.Characters, path: 'characters' },
   ];
+
   constructor() { }
+
   navListTrackBy = (index: number, nav: Nav) => nav.displayName;
 
 }

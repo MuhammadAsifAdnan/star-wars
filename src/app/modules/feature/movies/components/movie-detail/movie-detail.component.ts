@@ -15,6 +15,7 @@ import { MoviesStore } from '../../state/movies.store';
 export class MovieDetailComponent implements OnInit {
   selectedMovie$: Observable<Movie | undefined> = this.moviesQuery.selectActiveMovieWithCharactersSummary();
   isLoading$ = this.moviesQuery.selectLoading();
+
   constructor(private moviesQuery: MoviesQuery, private router: Router, private activatedRoute: ActivatedRoute, private moviesService: MoviesService, private moviesStore: MoviesStore) {
   }
 

@@ -8,11 +8,10 @@ import { MoviesService } from '../../state/movies.service';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class MoviesComponent implements OnInit {
-
   movies$ = this.moviesQuery.selectAll();
   isLoading$ = this.moviesQuery.selectLoading();
-  constructor(private moviesQuery: MoviesQuery,
-    private moviesService: MoviesService) { }
+
+  constructor(private moviesQuery: MoviesQuery, private moviesService: MoviesService) { }
 
   ngOnInit(): void {
     !this.moviesQuery.getHasCache() && this.moviesService.getAllMovies();

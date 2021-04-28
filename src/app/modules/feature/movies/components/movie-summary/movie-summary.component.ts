@@ -9,6 +9,7 @@ import { Movie } from '../../state/movie.model';
 })
 export class MovieSummaryComponent {
   @Input() movie: Movie | undefined;
+
   constructor() { }
 
 }

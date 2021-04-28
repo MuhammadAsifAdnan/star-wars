@@ -9,7 +9,6 @@ export class OpeningCrawlTrimEllipsisPipe implements PipeTransform {
   transform(openingCrawl: string | undefined): string {
     const symbolLimit = AppConfigService.appConfig.openingCrawlsSymbolLimit;
     let trimmedOpeningCrawl = openingCrawl?.length ? openingCrawl.trim() : '';
-
     if (trimmedOpeningCrawl.length > symbolLimit) {
       trimmedOpeningCrawl = trimmedOpeningCrawl.substr(0, symbolLimit) + '...';
     }
